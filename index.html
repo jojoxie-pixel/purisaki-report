@@ -26,7 +26,8 @@
         /* 内容样式 */
         h1 { font-size: 26px; line-height: 1.2; color: #000; margin: 0 0 15px 0; }
         .author-info { font-size: 13px; color: #888; margin-bottom: 20px; }
-        p { margin: 0 0 20px 0; font-size: 16px; color: #333; }
+        p { margin: 0 0 10px 0; font-size: 16px; color: #333; }
+        h3 { margin-top: 15px !important;margin-bottom: 2px !important; }
      
     .highlight-box {
         background-color: #fff9c4;
@@ -42,9 +43,6 @@
         /* 图片样式 */
         img { width: 100%; height: auto; display: block; margin: 25px 0; border-radius: 4px; }
         
-        /* 视频样式 */
-        video { width: 100%; height: auto; display: block; margin: 25px 0; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-
         /* 跳转按钮 */
         .cta-button { 
             display: block; background: #28a745; color: white; text-align: center; 
@@ -54,18 +52,11 @@
         }
         .cta-button:hover { transform: scale(1.02); background: #218838; }
 
-        /* 评论区 */
-        .reviews { margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px; }
-        .reviews h3 { margin-bottom: 20px; }
-        .review-item { margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px dashed #eee; }
-        .stars { color: #ffcc00; font-size: 18px; margin-bottom: 5px; display: block; }
-        .review-user { font-weight: bold; }
-        .verified { color: #28a745; font-size: 12px; margin-left: 5px; font-weight: normal; }
 
     .header-logo { padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 15px; }
     .header-logo img { width: 180px; margin: 0; } 
     
-    .main-title { font-size: 32px; font-weight: 800; line-height: 1.1; color: #333; margin-bottom: 20px; text-align: left; }
+    .main-title { font-size: 32px; font-weight: 800; line-height: 1.1; color: #333; margin-bottom: 10px; /* 从20px缩小到10px */text-align: left;}
     
     /* 社媒按钮样式 */
     .social-share-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin-bottom: 15px; }
@@ -89,6 +80,18 @@
         /* 底部 */
         .footer { margin-top: 50px; padding: 25px; font-size: 11px; color: #aaa; text-align: center; border-top: 1px solid #ddd; }
         .footer a { color: #aaa; text-decoration: underline; margin: 0 5px; }
+        h3 + p {
+    margin-top: 5px !important; /* 强制紧贴标题 */
+}
+.force-three-col {
+    display: flex !important;
+    flex-wrap: nowrap !important; /* PC 端强制不折行 */
+    gap: 15px !important;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
     </style>
 </head>
 <body>
@@ -100,9 +103,9 @@
     <h1 class="main-title">How This Unusual Skin-Applied Habit Helped Me Feel More Comfortable in My Body</h1>
 
    <div class="social-share-grid">
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link share-btn btn-fb"><i>f</i></a>
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link share-btn btn-x"><i>𝕏</i></a>
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link share-btn btn-pin"><i>P</i></a>
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link share-btn btn-fb"><i>f</i></a>
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link share-btn btn-x"><i>𝕏</i></a>
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link share-btn btn-pin"><i>P</i></a>
 </div>
 
     <div class="hero-image-container">
@@ -121,40 +124,70 @@
     <div class="img2">
     <img src="img2.webp" alt="Struggling with energy">
     <div class="image-caption">*Individual experiences may vary.</div>
+    <div class="personal-story-section" style="margin-top: 25px; color: #333; line-height: 1.6;">
+    <p>I hit 40, and it was like someone flipped a switch. <strong>My metabolism hit a brick wall.</strong> The pounds crept on slowly, then faster. Soon I was buying size 14 jeans and avoiding mirrors like they were contagious.</p>
+    
+    <p>Everything came crashing down last spring while shopping for my daughter's graduation dress.</p>
+    
+    <p><strong>The dress wouldn't zip!</strong> Not even close.</p>
+    
+    <p>Size 16. What I saw in that harsh fluorescent mirror made my knees buckle - a woman I didn't recognize, puffy and defeated.</p>
+    
+    <p><strong>That's when I heard it.</strong></p>
+    
+    <p>Through the dressing room wall: "Did you see that woman who just went in there? She grabbed like four different sizes... <strong>I feel so bad for her.</strong>"</p>
+    
+    <p><strong>They were talking about me.</strong></p>
+    
+    <p>I sobbed in that dressing room - <strong>ugly, choking sobs. I wasn't okay. I was drowning.</strong></p>
+    
+    <p>Later, my daughter Emma showed me graduation photos. <strong>I looked like a stranger fading away</strong> while everyone else celebrated.</p>
+    
+    <p>"Mom," Emma said quietly, "<strong>You haven't seemed... happy... in a really long time.</strong>"</p>
+    
+    <p>That broke my heart. My own daughter had been <strong>watching me disappear.</strong></p>
+</div>   
+ 
+    <div class="content-section" style="margin-top: 30px;">
+    <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 20px;">My Expensive Failures</h2>
+    
+    <img src="img3-4.webp" alt="Expensive Failures" style="width: 100%; border-radius: 8px; margin-bottom: 20px;">
+    
+    <p>I desperately tried everything.</p>
+    
+    <p>Weight Watchers lasted six weeks - the point-counting <strong>felt like prison.</strong></p>
+    
+    <p>The gym <strong>was a disaster</strong> - three visits total before I gave up.</p>
+    
+    <p><strong>Keto turned me into a nightmare with brain fog and mood swings.</strong></p>
+    
+    <p>I even looked into those "miracle" procedures after seeing celebrity transformations. $1,200 per month out of pocket???!! <strong>We couldn't afford that, and those side effects terrified me anyway.</strong></p>
 </div>
 
-    <p>After I turned 40, things changed. My energy dipped, my routines didn’t feel as effective as they used to, and my body didn’t respond the same way it once had. I found myself reaching for bigger clothing sizes and avoiding the mirror whenever possible.
-
-    The moment that really hit me came last spring while I was out shopping with my daughter for her graduation dress. I tried on something new, and it didn’t even come close to zipping. Under those harsh lights, I barely recognized myself.
-
-    Later, my daughter told me gently,
-    “Mom, you just haven’t seemed like yourself for a while.”
-    That stayed with me.</p>
     <h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 15px;">Everything Changed After This Surprising Discovery</h2>
 
-<img src="img3.webp" alt="The Discovery" style="width:100%; border-radius:4px; margin-bottom: 20px;">
+    <img src="img3.webp" alt="The Discovery" style="width:100%; border-radius:4px; margin-bottom: 20px;">
 
 <p>My turning point came at a family barbecue when I barely recognized my sister-in-law, Michelle. She looked incredible — glowing, confident, and easily 30+ pounds lighter.</p>
 
 <p>“What on earth are you doing?” I asked.</p>
 
 <p>She smiled and said, “Honestly? It’s these Purisaki Patches I put on every morning.” She even showed me her before-and-after photos, and the difference was undeniable. She explained that instead of going through the stomach, 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
     delivers plant extracts through the skin for smoother absorption.
 </p>
 
 <p>I was intrigued... but still skeptical.</p>
 
+    <img src="img4-5.webp" alt="The Discovery" style="width:100%; border-radius:4px; margin-bottom: 20px;">
+    
 <p>Three days later, I met my old college roommate, Lisa Chen, who happened to be in town for a medical conference. When I mentioned Michelle’s transformation, Lisa nodded immediately.</p>
 
 <p>“You’re describing metabolic resistance,” she said. “After 35, a lot of women’s bodies respond differently to traditional weight-loss methods. The digestive system gets overwhelmed, and it stops absorbing key nutrients efficiently.”</p>
 
-<img src="img4.webp" alt="Absorption Comparison Chart">
-
 <p>She explained that new research suggests transdermal delivery — like the approach 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
-    uses — may offer better ingredient uptake than oral supplements.
-</p>
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
+    uses — may offer better ingredient uptake than oral supplements.</p>
 
 <p>“Your skin has direct access to your bloodstream,” she said. “Some early studies show these kinds of ingredients may work more effectively this way.”</p>
 
@@ -164,34 +197,35 @@
 
 <p>I left that café with a little pack of Purisaki Patches... and a tiny bit of hope I hadn’t felt in years.</p>
 
-<h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 15px;">How It Actually Works</h2>
 
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 25px 0; border-radius: 8px; background-color: #000;">
-    <iframe 
-        src="https://www.youtube.com/embed/0sYeizqQJz0?autoplay=1&mute=1&loop=1&playlist=0sYeizqQJz0&controls=0" 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-        allow="autoplay; encrypted-media" 
-        allowfullscreen>
-    </iframe>
-</div>
-<div style="text-align: center; color: #999; font-size: 11px; margin-top: 8px;">Demonstration: The sustained release technology of Purisaki.</div>
-<p>Once I got home with those sample 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki Patches</a>, 
-    I finally understood why Michelle’s results made so much sense. <strong>Purisaki</strong> delivers its ingredients directly through the skin — giving them a more direct path into the bloodstream.
-</p>
+<h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 5px;">How It Actually Works</h2>
+<div class="ingredients-section" style="margin: 0 0 30px 0; padding: 0;">
+    <p>Once I got home with those sample <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="color: #007bff; text-decoration: underline; font-weight: bold;">Purisaki Patches</a>, I finally understood why Michelle's results made so much sense. <strong>Purisaki</strong> delivers its ingredients directly through the skin — giving them a more direct path into the bloodstream.</p>
 
-<p>Each Purisaki Patch includes a blend of naturally derived ingredients often associated with metabolic support, including:</p>
+    <p>Each Purisaki Patch includes a blend of naturally derived ingredients often associated with metabolic support, including:</p>
 
-<div style="margin-bottom: 30px;">
-    <p style="margin-bottom: 12px;">✅ <strong>Fucoxanthin</strong> – a unique compound from seaweed often linked to supporting stubborn midsection areas</p>
-    <p style="margin-bottom: 12px;">✅ <strong>Green Tea Extract</strong> – commonly associated with energy and metabolic balance</p>
-    <p style="margin-bottom: 12px;">✅ <strong>African Mango Seed</strong> – traditionally used for appetite support</p>
-    <p style="margin-bottom: 12px;">✅ <strong>Pomegranate Oil</strong> – known for its antioxidant and wellness properties</p>
-</div>
+    <ul style="list-style: none; padding-left: 0; margin: 20px 0;">
+        <li style="margin-bottom: 15px; display: flex; align-items: baseline;">
+            <span style="color: #28a745; margin-right: 10px;">✅</span>
+            <span><strong>Fucoxanthin</strong> – a unique compound from seaweed often linked to supporting stubborn midsection areas</span>
+        </li>
+        <li style="margin-bottom: 15px; display: flex; align-items: baseline;">
+            <span style="color: #28a745; margin-right: 10px;">✅</span>
+            <span><strong>Green Tea Extract</strong> – commonly associated with energy and metabolic balance</span>
+        </li>
+        <li style="margin-bottom: 15px; display: flex; align-items: baseline;">
+            <span style="color: #28a745; margin-right: 10px;">✅</span>
+            <span><strong>African Mango Seed</strong> – traditionally used for appetite support</span>
+        </li>
+        <li style="margin-bottom: 15px; display: flex; align-items: baseline;">
+            <span style="color: #28a745; margin-right: 10px;">✅</span>
+            <span><strong>Pomegranate Oil</strong> – known for its antioxidant and wellness properties</span>
+        </li>
+    </ul>
 
-<a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link cta-button">
-    Check Availability & Apply Discount
-</a>
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 20px 10px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; margin-top: 30px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+        Check Availability & Apply Discount
+    </a>
 
 <div class="article-image">
     <img src="img5.webp" alt="Purisaki 30-Day Program Ingredients">
@@ -212,75 +246,85 @@
 
 <p>Just <strong>peel, stick, and go.</strong> You wear the patch for about 8 hours, then remove it — like flipping a simple “on/off” switch. No reminders, no schedules, and no lifestyle overhaul required.</p>
 
-<h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 15px;">I Took Those Patches Home & Here's What Happened Next</h2>
+<div class="timeline-section" style="margin-top: 40px; color: #2c3e50;">
+    <h2 style="font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">I Took Those Patches Home & Here's What Happened Next</h2>
 
-<div class="article-image">
-    <img src="img6.webp" alt="Sarah trying the patches">
-</div>
+    <p style="margin-bottom: 20px;">I have to be honest, <strong>I was a bit skeptical.</strong> Personally, those stickers looked ridiculous, but <strong>I was curious enough to try them.</strong> And what happened in the next few weeks simply <strong>blew my mind into a million pieces!</strong></p>
 
-<p>I’ll be honest — I was skeptical at first. The patches looked a little odd to me, and I wasn’t expecting much. But I was curious enough to give them a fair try. What happened over the next few weeks wasn’t dramatic or overnight... but it was steady, noticeable, and honestly encouraging.</p>
+    <h3 style="font-size: 24px; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Week 1</h3>
+    <p style="margin-bottom: 20px;">The first thing I noticed wasn't weight loss - it was my sleep. No more 3 AM wake-ups. My wine cravings disappeared completely. The scale showed <strong>3 pounds down.</strong></p>
 
-<p><strong>Week 1:</strong>
-The first thing I noticed wasn’t weight loss — it was my sleep. I wasn’t waking up in the middle of the night anymore, and my cravings felt easier to manage. The scale barely moved (maybe half a kilo), but the change in how I <em>felt</em> was enough to make me want to keep going.</p>
+    <h3 style="font-size: 24px; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Week 4</h3>
+    <p style="margin-bottom: 20px;"><strong>I'd lost 12 pounds total.</strong> People asked if I'd done something different with my hair. I had energy to play with my kids after work instead of collapsing.</p>
 
-<p><strong>Week 2:</strong>
-This week felt more balanced. My appetite steadied, I wasn’t prowling the kitchen at 10 PM, and my energy dips weren’t as sharp. By the end of Week 2, I was down roughly 1.5–2 kg in total. Nothing extreme — just slow, realistic progress.</p>
+    <h3 style="font-size: 24px; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Month 2</h3>
+    <p style="margin-bottom: 20px;">This is when things really accelerated. Weight came off steadily. Pizza Fridays continued, but portion control happened naturally. By the end of month two, <strong>I'd lost 28 pounds total.</strong></p>
 
-<p><strong>Week 4:</strong>
-Week 3 was a bit slower, but by Week 4 everything evened out again. My cravings eased, the afternoon slump had almost disappeared, and people started telling me I looked “rested.” By this point, I was down about 3.5–4 kg. My clothes fit more comfortably, and it felt like my body was finally cooperating with me instead of fighting back.</p>
+    <h3 style="font-size: 24px; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Month 3</h3>
+    <p style="margin-bottom: 20px;">I kid you not. When I stepped on my scales I thought it was an error. I reached 42 pounds lost. Emma said I had my "sparkle back." Shopping became fun instead of humiliating. But the transformation wasn't done yet.</p>
 
-<p><strong>Week 6:</strong>
-The next couple of weeks followed the same gentle rhythm — some days slower, some days more encouraging. By Week 6, my total loss was right around 5.5–6 kg. The most surprising part? It didn’t feel forced. No extreme dieting, no harsh routines — just a small daily habit that quietly supported me in the background.</p>
-
-<h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 15px;">Real People, Real Results</h2>
-
-<p>After I shared my experience with the 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
-    patches, my inbox exploded. What shocked me most was how many women were quietly struggling with the same stubborn weight, cravings, and energy crashes — and how many of them felt genuine changes after trying the patches for themselves.
-</p>
-
-<div class="article-image">
-    <img src="img7.webp" alt="Another satisfied user">
-</div>
-
-<div style="background-color: #f0f7fd; border-left: 4px solid #3498db; padding: 20px; margin: 20px 0; border-radius: 0 5px 5px 0;">
+    <h3 style="font-size: 24px; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Month 4</h3>
+    <p style="margin-bottom: 20px;">
+        When I stepped on the scale, I had to check twice. <strong>52 POUNDS TOTAL!!!</strong> I DID IT! I reached my goal weight! And I'd done it without giving up a single thing I loved. My body had finally reset itself.
+    </p>
+    <div style="width: 100%; margin: 20px 0;">
+        <img src="img6.webp" alt="Final Transformation Result" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     
-    <p style="margin: 0 0 15px 0; line-height: 1.6; color: #444; font-style: italic;">
-        "I walk daily, but after 45 I felt like my body wasn’t responding the same way. Adding this patch has helped me feel more ‘in sync’ again. My clothes fit better, and I feel more confident."
-    </p>
+   <div class="reviews-section" style="margin-top: 40px; color: #2c3e50;">
+    <h2 style="font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 30px;">Real Women, Real Results</h2>
 
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <strong style="font-size: 16px; color: #333;">— Laura H.</strong>
-        <span style="color: #ffcc00; font-size: 18px; letter-spacing: 2px;">★★★★★</span>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        
+        <div style="flex: 1; min-width: 280px; background: #f9f9f9; padding: 15px; border-radius: 10px; border: 1px solid #eee;">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <img src="8-1.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                <div>
+                    <div style="font-weight: bold;">Patricia M., Florida <span style="color: #3897f0;">✔</span></div>
+                    <div style="color: #ffc107;">★★★★★</div>
+                </div>
+            </div>
+            <p style="font-style: italic; font-size: 14px; line-height: 1.4; margin-bottom: 15px;">
+                "I'm 57 and thought my flabby belly was permanent after menopause. Lost 28 pounds in less than two months with these patches."
+            </p>
+            <img src="8-1.webp" style="width: 100%; border-radius: 5px;">
+        </div>
+
+        <div style="flex: 1; min-width: 280px; background: #f9f9f9; padding: 15px; border-radius: 10px; border: 1px solid #eee;">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <img src="8-2.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                <div>
+                    <div style="font-weight: bold;">Lisa R., Texas <span style="color: #3897f0;">✔</span></div>
+                    <div style="color: #ffc107;">★★★★★</div>
+                </div>
+            </div>
+            <p style="font-style: italic; font-size: 14px; line-height: 1.4; margin-bottom: 15px;">
+                "I travel constantly and eat out all the time. The patches are perfect - just pack them in my carry-on. Down 35 pounds and counting."
+            </p>
+            <img src="8-2.webp" style="width: 100%; border-radius: 5px;">
+        </div>
+
+        <div style="flex: 1; min-width: 280px; background: #f9f9f9; padding: 15px; border-radius: 10px; border: 1px solid #eee;">
+            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                <img src="8-3.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                <div>
+                    <div style="font-weight: bold;">Rachel T., Ohio <span style="color: #3897f0;">✔</span></div>
+                    <div style="color: #ffc107;">★★★★★</div>
+                </div>
+            </div>
+            <p style="font-style: italic; font-size: 14px; line-height: 1.4; margin-bottom: 15px;">
+                "I hate the gym and don't have time anyway. No exercise needed. I've lost 41 pounds just living my normal life."
+            </p>
+            <img src="8-3.webp" style="width: 100%; border-radius: 5px;">
+        </div>
     </div>
 
-</div>
-
-<div class="article-image">
-    <img src="img8.webp" alt="Marcia G. using the patch">
-</div>
-
-<div style="background-color: #f0f7fd; border-left: 4px solid #3498db; padding: 20px; margin: 20px 0; border-radius: 0 5px 5px 0;">
-    <p style="margin: 0 0 15px 0; line-height: 1.6; color: #444; font-style: italic;">
-        “My biggest challenge was the 3 PM slump. I’d grab sugar every time. With these patches, my energy feels steadier throughout the day.”
-    </p>
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <strong style="font-size: 16px; color: #333;">— Marcia G.</strong>
-        <span style="color: #ffcc00; font-size: 18px; letter-spacing: 2px;">★★★★★</span>
-    </div>
-</div>
-
-<div class="article-image">
-    <img src="img9.webp" alt="Samantha L. sharing results">
-</div>
-
-<div style="background-color: #f0f7fd; border-left: 4px solid #3498db; padding: 20px; margin: 20px 0; border-radius: 0 5px 5px 0;">
-    <p style="margin: 0 0 15px 0; line-height: 1.6; color: #444; font-style: italic;">
-        “This format was perfect for me. Within a few days, I felt less bloated and more comfortable.”
-    </p>
-    <div style="display: flex; align-items: center; gap: 10px;">
-        <strong style="font-size: 16px; color: #333;">— Samantha L.</strong>
-        <span style="color: #ffcc00; font-size: 18px; letter-spacing: 2px;">★★★★★</span>
+    <div style="margin-top: 30px; text-align: center;">
+        <p>And these are just three examples out of 15,000 women who tried Purisaki Berberine patches.</p>
+        <p>Most even <strong>reported visible results within the FIRST week</strong> of using this patch without side effects.</p>
+        
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 18px 10px; text-decoration: none; font-size: 22px; font-weight: 800; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+            I Want To Try This!
+        </a>
     </div>
 </div>
 
@@ -289,7 +333,7 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
 <p>If you ask me, finally feeling in control of your cravings, waking up with steady energy, and watching your clothes fit more comfortably again? That’s truly priceless.</p>
 
 <p>So if you’ve been struggling with stubborn weight, slow metabolism, or constant energy dips... 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> 
     is absolutely worth considering.
 </p>
 
@@ -305,7 +349,7 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
 
 <p>If you’re ready to feel lighter, more balanced, and more like <em>yourself</em> again... Purisaki could be the gentle support you’ve been searching for.</p>
 
-<a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link cta-button" style="padding: 25px 15px; font-size: 24px; line-height: 1.2;">
+<a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link cta-button" style="padding: 25px 15px; font-size: 24px; line-height: 1.2;">
     Ready to Start Your Own Transformation? Begin with Purisaki!
 </a>
 
@@ -321,13 +365,13 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
 
 <p>That’s why the company now uses <strong>official holographic seals and batch verification</strong> to ensure authenticity.</p>
 
-<p>If you decide to try Purisaki, make sure you’re getting the real thing — <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">only from the official website</a> while the 70% discount is still active. Supplies are limited, and once this batch is gone, the offer ends.</p>
+<p>If you decide to try Purisaki, make sure you’re getting the real thing — <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">only from the official website</a> while the 70% discount is still active. Supplies are limited, and once this batch is gone, the offer ends.</p>
 
 <h2 style="font-size: 26px; font-weight: 800; margin-top: 40px; margin-bottom: 15px;">My Final Words</h2>
 
 <p>Six months ago, I was hiding from mirrors and avoiding social events whenever I could. I felt invisible, exhausted, and stuck in a body that didn’t feel like mine anymore.</p>
 
-<p>Now, after making <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> Patches part of my daily routine, I’m finally feeling comfortable in my skin again. I’m back in a size 8 dress I haven’t worn since my twenties, my energy feels steadier, and I actually look forward to getting dressed in the morning.</p>
+<p>Now, after making <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #0066cc; text-decoration: underline; font-weight: bold;">Purisaki</a> Patches part of my daily routine, I’m finally feeling comfortable in my skin again. I’m back in a size 8 dress I haven’t worn since my twenties, my energy feels steadier, and I actually look forward to getting dressed in the morning.</p>
 
 <p>Because of high demand, Purisaki stock tends to sell out quickly — and the special pricing offered to readers of this page is only available while supplies last.</p>
 
@@ -339,12 +383,88 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
     </p>
 </div>
 
-<a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6933" class="cta-link cta-button" style="padding: 22px 10px; font-size: 24px;">
+<a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link cta-button" style="padding: 22px 10px; font-size: 24px;">
     Check Availability & Claim 70% Off >>
 </a>
 
-<footer style="background-color: #000; color: #888; padding: 40px 20px; font-size: 12px; text-align: center; line-height: 1.6; margin-top: 50px;">
+<div class="final-proof-section" style="margin-top: 50px; padding-bottom: 50px; text-align: center; color: #2c3e50;">
     
+    <h2 style="font-size: 32px; font-weight: 900; line-height: 1.2; margin-bottom: 15px;">
+        15,000+ Women Felt a Change In 1 Week<br>By Discovering Key To Weight Loss
+    </h2>
+    
+    <p style="font-size: 18px; color: #555; max-width: 800px; margin: 0 auto 30px auto; padding: 0 15px;">
+        See how a small patch became a weight management breakthrough for thousands of women.
+    </p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 0 10px;">
+        
+        <div style="flex: 1; min-width: 300px; max-width: 400px;">
+            <img src="reviews-1.avif" alt="Success Story 1" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        </div>
+
+        <div style="flex: 1; min-width: 300px; max-width: 400px;">
+            <img src="reviews-2.avif" alt="Success Story 2" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
+        </div>
+
+    </div>
+
+<div class="text-reviews-container" style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; padding: 0 10px;">
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Emily R, 44</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">I was skeptical at first - how could a patch really help? But after a week, I noticed I wasn't reaching for my afternoon snacks anymore. It's so easy to just put it on in the morning and forget about it. Finally something that fits into my crazy mom schedule!</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Jenifer K, 51</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">Honestly, I've tried everything. This is the first thing that didn't make me feel jittery or sick. I love that it's natural and I don't have to remember to take pills throughout the day. The hunger pangs between meals have really calmed down. 16 lbs down already!!!</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Lisa L, 39</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">I wanted those fancy weight loss pills celebrities use, but some friends told me about natural alternatives before considering expensive pills. So glad I found these patches! They're discreet - I wear them under my work clothes and nobody knows. The cravings for sweets after dinner have almost disappeared. I lost 7 lbs!</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Amanda T, 35</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">As a working mom, I needed something simple. No pills to remember, no appointments, no drama. Just stick it on and go. I feel more in control of my eating habits for the first time in years.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Marie P, 61</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★☆</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">Menopause left me with a lot of unwanted weight, everything changed with my body. These patches have helped me feel more like myself again. No side effects, no fuss. I just wish I'd found them sooner, because I'm 15 lbs down!</p>
+    </div>
+
+    <div style="flex: 1; min-width: 300px; max-width: 380px; background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <div style="font-weight: 800; font-size: 18px; margin-bottom: 5px;">Debra T, 60</div>
+        <div style="color: #28a745; font-size: 14px; margin-bottom: 8px;">✔ Verified Customer</div>
+        <div style="color: #ffc107; margin-bottom: 12px;">★★★★☆</div>
+        <p style="font-size: 15px; line-height: 1.5; color: #444;">I struggled with weight since menopause, and my doctor kept pushing expensive specialty superfood diets. I thought I'd give this a try first. I don't get those terrible hunger pangs like I used to, especially in the evenings when I'd raid the kitchen. It's simple enough for an old gal like me to manage!</p>
+    </div>
+   <div style="margin-top: 40px;">
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: inline-block; background-color: #28a745; color: white; text-align: center; padding: 20px 40px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+            CLAIM YOUR 70% DISCOUNT NOW
+        </a>
+        <p style="margin-top: 5px; font-size: 14px; color: #888;">*Individual results may vary.</p>
+</div>
+
+<footer style="background-color: #000; color: #888; padding: 20px 20px; font-size: 12px; text-align: center; line-height: 1.6; margin-top: 10px;">
+    <div style="margin-bottom: 25px; display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; padding: 0 20px;">
+        <img src="visa.svg" alt="Visa" style="height: 25px; width: auto; margin: 0; border-radius: 0; background: transparent; box-shadow: none;">
+        <img src="mastercard.svg" alt="Mastercard" style="height: 30px; width: auto; margin: 0; border-radius: 0; background: transparent; box-shadow: none;">
+        <img src="paypal.svg" alt="PayPal" style="height: 22px; width: auto; margin: 0; border-radius: 0; background: transparent; box-shadow: none;">
+    </div>
     <div style="margin-bottom: 25px;">
         <a href="https://support.purisaki.com/en/support/home" target="_blank" style="color: #888; text-decoration: none; margin: 0 10px;">Contact</a>
         <a href="https://trypurisaki.com/purisaki-berberine/terms?vndr=evf&evf=1&ly=2&otv=1&offid=87&affiliate_id=1724&l=en&subid=719&subid2=5fe5a3af6b5e47d1a1d95bc6d7b8ff74&sale=bf2025&uuid=019d3e3d-9454-79d5-b3cd-3297b50c1ac5&lecd=3lpk4&ppwa=payments%40wellnovasolutions.org&ec%5B0%5D=ppve3&hpmo=1&gae=1&cbv=6&ecm=1&_=12861%2C13084%2C11349%2C12289%2C4288%2C11119&ipul=1&qpp=3" target="_blank" style="color: #888; text-decoration: none; margin: 0 10px;">Terms of Service</a>
@@ -352,16 +472,6 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
         <a href="https://trypurisaki.com/purisaki-berberine/product?vndr=evf&evf=1&ly=2&otv=1&uid=7083&offid=87&affiliate_id=1724&l=en&subid=719&subid2=5fe5a3af6b5e47d1a1d95bc6d7b8ff74&sale=bf2025" target="_blank" style="color: #888; text-decoration: none; margin: 0 10px;">Track My Order</a>
         <a href="https://trypurisaki.com/purisaki-berberine/return?vndr=evf&evf=1&ly=2&otv=1&offid=87&affiliate_id=1724&l=en&subid=719&subid2=5fe5a3af6b5e47d1a1d95bc6d7b8ff74&sale=bf2025&uuid=019d3e3d-9454-79d5-b3cd-3297b50c1ac5&lecd=3lpk4&ppwa=payments%40wellnovasolutions.org&ec%5B0%5D=ppve3&hpmo=1&gae=1&cbv=6&ecm=1&_=12861%2C13084%2C11349%2C12289%2C4288%2C11119&ipul=1&qpp=3" target="_blank" style="color: #888; text-decoration: none; margin: 0 10px;">Returns & Refunds Policy</a>
        </div>
-
-    <p style="max-width: 800px; margin: 0 auto 20px auto;">
-        Transdermal delivery systems ("skin patches") have been explored in scientific research as a method for delivering active compounds through the skin, with studies investigating their potential to influence local subcutaneous fat.<sup>[1]</sup>
-    </p>
-
-    <p style="margin-bottom: 25px;">
-        SOURCE (general scientific background – not a study on Purisaki patches):<br>
-        <sup>[1]</sup> Clinical study on a transdermal patch designed to reduce local subcutaneous fat:<br>
-        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11638647/" target="_blank" style="color: #0066cc;">PubMed Central - PMC11638647</a>
-    </p>
 
     <div style="border-top: 1px solid #333; padding-top: 20px; margin-bottom: 30px;">
         <strong style="color: #bbb;">IMPRINT (IMPRESSUM)</strong><br>
@@ -373,40 +483,7 @@ The next couple of weeks followed the same gentle rhythm — some days slower, s
         Phone: US +1 (850) 389-0125
     </div>
 
-    <div style="margin-bottom: 30px;">
-        <p style="color: #bbb; font-weight: bold; margin-bottom: 10px;">INGREDIENTS:</p>
-        <table style="width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; border: 1px solid #00ff00; text-align: left; color: #00ff00; font-family: monospace;">
-            <tr style="border-bottom: 1px solid #00ff00;">
-                <th style="padding: 5px 10px;">Ingredients</th>
-                <th style="padding: 5px 10px; border-left: 1px solid #00ff00;">Amount (mg)</th>
-            </tr>
-            <tr><td style="padding: 2px 10px;">Berberine Extract</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">5</td></tr>
-            <tr><td style="padding: 2px 10px;">Fucoxanthin Extract</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">3</td></tr>
-            <tr><td style="padding: 2px 10px;">Green Tea Extract</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">3</td></tr>
-            <tr><td style="padding: 2px 10px;">Pomegranate Oil (Punicic Acid Extract)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">2.5</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin C (Ascorbic Acid)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">2.5</td></tr>
-            <tr><td style="padding: 2px 10px;">African Mango Seed Extract</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">2.5</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin B3 (Niacinamide)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">2</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin B1 (Thiamine)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">1</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin B2 (Riboflavin)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">1</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin B5 (Pantothenic Acid)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">1</td></tr>
-            <tr><td style="padding: 2px 10px;">Vitamin B6 (Pyridoxine)</td><td style="padding: 2px 10px; border-left: 1px solid #00ff00; text-align: right;">0.5</td></tr>
-            <tr style="border-top: 1px solid #00ff00; font-weight: bold;">
-                <td style="padding: 5px 10px;">Total</td>
-                <td style="padding: 5px 10px; border-left: 1px solid #00ff00; text-align: right;">25</td>
-            </tr>
-        </table>
-    </div>
-
-    <div style="max-width: 900px; margin: 0 auto; text-align: justify; font-size: 10px; color: #666;">
-        <p><strong>WEIGHT-LOSS DISCLAIMER:</strong> Weight loss is achieved as part of a balanced, reduced-calorie diet and an exercise program. Typical results show an average loss of 0.5-1 kg per week. Individual results may vary.</p>
-        <p><strong>HEALTH DISCLAIMER:</strong> This product is not a substitute for medications or other treatments prescribed by a doctor or medical professional. Users should consult a physician before starting any new supplement or transdermal product.</p>
-        <p><strong>PRODUCT DISCLAIMER:</strong> Results may vary. This product is not intended to diagnose, treat, cure, or prevent any diseases or health conditions. Any weight-management benefits occur only in the context of a healthy, calorie-reduced diet and an exercise program.</p>
-        <p><strong>ADVERTISEMENT DISCLAIMER:</strong> This website and the products and services mentioned are part of an advertising marketplace. This website is an advertisement and not a news publication. All individuals shown are models.</p>
-        <p><strong>MARKETING DISCLAIMER:</strong> Please note that the operator has a financial relationship with the products and services advertised on this website. The operator receives compensation when a qualified lead is generated.</p>
-    </div>
-
-    <p style="margin-top: 40px;">© 2025 All Rights Reserved</p>
+<p style="margin-top: 20px;">© 2026 All Rights Reserved</p>
 
 </footer>
 </div> <script type="text/javascript">
