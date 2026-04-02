@@ -92,6 +92,59 @@
     margin-left: auto;
     margin-right: auto;
 }
+    /* --- 悬浮引导框合并样式 --- */
+.sticky-footer {
+    position: fixed;
+    bottom: -100px; /* 初始隐藏在屏幕外 */
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    z-index: 9999;
+    transition: bottom 0.4s ease-in-out; /* 快速响应滚动 */
+}
+
+/* 当加上 .show 类时，滑入屏幕 */
+.sticky-footer.show {
+    bottom: 0;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+.sticky-btn {
+    flex: 1;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(40,167,69,0.3);
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
     </style>
 </head>
 <body>
@@ -509,6 +562,24 @@
             });
         }
     })();
+</script>
+<div id="sticky-footer-cta" class="sticky-footer">
+    <div class="footer-content">
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="sticky-btn">
+            Get 70% Discount
+        </a>
+        <div>
+            <script>
+// 这段就是 JS 代码，不需要编辑器，直接贴在 HTML 里
+window.addEventListener("scroll", function() {
+    var footer = document.getElementById('sticky-footer-cta');
+    // 为了让你现在能看到效果，我们设为：只要滚动超过 100 像素就出来
+    if (window.pageYOffset > 100) {
+        footer.classList.add('show');
+    } else {
+        footer.classList.remove('show');
+    }
+});
 </script>
 
 </body>
