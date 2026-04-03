@@ -253,7 +253,7 @@
 
 <h2 style="font-size: 26px; font-weight: 800; margin-top: 35px; margin-bottom: 5px;">How It Actually Works</h2>
 <div class="ingredients-section" style="margin: 0 0 30px 0; padding: 0;">
-    <p>Once I got home with those sample <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="color: #007bff; text-decoration: underline; font-weight: bold;">Purisaki Patches</a>, I finally understood why Michelle's results made so much sense. <strong>Purisaki</strong> delivers its ingredients directly through the skin — giving them a more direct path into the bloodstream.</p>
+    <p>Once I got home with those sample <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="color: #007bff; text-decoration: underline; font-weight: bold;">Purisaki Patches</a>, I finally understood why Michelle's results made so much sense. <strong>Purisaki</strong> delivers its ingredients directly through the skin — giving them a more direct path into the bloodstream.</p>
 
     <p>Each Purisaki Patch includes a blend of naturally derived ingredients often associated with metabolic support, including:</p>
 
@@ -276,7 +276,7 @@
         </li>
     </ul>
 
-    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 20px 10px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; margin-top: 30px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+    <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 20px 10px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; margin-top: 30px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
         Check Availability & Apply Discount
     </a>
 
@@ -375,7 +375,7 @@
         <p>And these are just three examples out of 15,000 women who tried Purisaki Berberine patches.</p>
         <p>Most even <strong>reported visible results within the FIRST week</strong> of using this patch without side effects.</p>
         
-        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 18px 10px; text-decoration: none; font-size: 22px; font-weight: 800; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="display: block; background-color: #28a745; color: white; text-align: center; padding: 18px 10px; text-decoration: none; font-size: 22px; font-weight: 800; border-radius: 10px; margin-top: 20px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
             I Want To Try This!
         </a>
     </div>
@@ -506,7 +506,7 @@
         <p style="font-size: 15px; line-height: 1.5; color: #444;">I struggled with weight since menopause, and my doctor kept pushing expensive specialty superfood diets. I thought I'd give this a try first. I don't get those terrible hunger pangs like I used to, especially in the evenings when I'd raid the kitchen. It's simple enough for an old gal like me to manage!</p>
     </div>
    <div style="margin-top: 40px;">
-        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" style="display: inline-block; background-color: #28a745; color: white; text-align: center; padding: 20px 40px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link" style="display: inline-block; background-color: #28a745; color: white; text-align: center; padding: 20px 40px; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 10px; box-shadow: 0 4px 15px rgba(40,167,69,0.3);">
             CLAIM YOUR 70% DISCOUNT NOW
         </a>
         <p style="margin-top: 5px; font-size: 14px; color: #888;">*Individual results may vary.</p>
@@ -538,44 +538,58 @@
 
 <p style="margin-top: 20px;">© 2026 All Rights Reserved</p>
 
+<div id="sticky-footer-cta" class="sticky-footer">
+    <div class="footer-content">
+        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link sticky-btn">
+            CLAIM YOUR 70% DISCOUNT NOW
+        </a>
+    </div>
+</div>
+
 <script type="text/javascript">
-    (function() {
-        function enforceTracking() {
-            const params = new URLSearchParams(window.location.search);
-            if (!params.toString()) return;
+(function() {
+    // --- 弹窗显示/隐藏逻辑 ---
+    var footer = document.getElementById('sticky-footer-cta');
+    if (footer) {
+        window.addEventListener("scroll", function() {
+            // 只要滚动超过 100 像素就显示
+            if (window.pageYOffset > 100) {
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        });
+    }
 
-            // 强制扫描全页面所有 cta-link
-            document.querySelectorAll('.cta-link').forEach(link => {
-                try {
-                    let currentHref = link.getAttribute('href');
-                    if (!currentHref || currentHref.startsWith('#')) return;
-                    
-                    // 如果链接里还没带上地址栏的参数，就加上
-                    if (!currentHref.includes(params.toString().split('=')[0])) {
-                        let url = new URL(link.href, window.location.origin);
-                        params.forEach((v, k) => {
-                            url.searchParams.set(k, v);
-                        });
-                        link.href = url.toString();
-                    }
-                } catch (e) {
-                    // 个别链接报错不影响全局
-                }
-            });
-        }
+    // --- 强制归因追踪逻辑 ---
+    function applyTracking() {
+        const params = new URLSearchParams(window.location.search);
+        if (!params.toString()) return; // 地址栏没参数就不跑
 
-        // 1. 立即执行
-        enforceTracking();
-        // 2. 页面完全加载后再执行一次
-        window.addEventListener('load', enforceTracking);
-        // 3. 每隔 1 秒强制检查一次（防止弹窗等动态元素漏掉），执行 5 次后停止
-        let count = 0;
-        let timer = setInterval(() => {
-            enforceTracking();
-            count++;
-            if (count > 5) clearInterval(timer);
-        }, 1000);
-    })();
+        // 只要 class 包含 cta-link，就强行追加参数
+        document.querySelectorAll('.cta-link').forEach(link => {
+            try {
+                let currentHref = link.getAttribute('href');
+                if (!currentHref || currentHref.startsWith('#')) return;
+
+                let url = new URL(link.href, window.location.origin);
+                params.forEach((v, k) => {
+                    url.searchParams.set(k, v);
+                });
+                link.href = url.toString();
+            } catch (e) {
+                console.warn("链接处理跳过:", e);
+            }
+        });
+    }
+
+    // 页面加载完运行一次
+    window.addEventListener('load', applyTracking);
+    // 立即运行一次（确保抓到静态 HTML）
+    applyTracking();
+    // 1秒后补偿运行一次（防止某些动态加载的元素漏掉）
+    setTimeout(applyTracking, 1000);
+})();
 </script>
 
 </body>
