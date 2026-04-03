@@ -538,45 +538,45 @@
 
 <p style="margin-top: 20px;">© 2026 All Rights Reserved</p>
 
-<div id="sticky-footer-cta" class="sticky-footer">
-        <div class="footer-content">
-            <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link sticky-btn">
-                Get 70% Discount
-            </a>
-        </div>
-    </div>
-
-    <script>
-        window.addEventListener("scroll", function() {
-            var footer = document.getElementById('sticky-footer-cta');
-            if (window.pageYOffset > 100) {
-                footer.classList.add('show');
-            } else {
-                footer.classList.remove('show');
-            }
-        });
-    </script>
-
-    <script type="text/javascript">
-        (function() {
+<script type="text/javascript">
+    (function() {
+        function enforceTracking() {
             const params = new URLSearchParams(window.location.search);
-            if (params.toString()) {
-                // 它会扫描页面上所有带 cta-link 的链接并追加参数
-                document.querySelectorAll('.cta-link').forEach(link => {
-                    try {
-                        let url = new URL(link.href);
+            if (!params.toString()) return;
+
+            // 强制扫描全页面所有 cta-link
+            document.querySelectorAll('.cta-link').forEach(link => {
+                try {
+                    let currentHref = link.getAttribute('href');
+                    if (!currentHref || currentHref.startsWith('#')) return;
+                    
+                    // 如果链接里还没带上地址栏的参数，就加上
+                    if (!currentHref.includes(params.toString().split('=')[0])) {
+                        let url = new URL(link.href, window.location.origin);
                         params.forEach((v, k) => {
                             url.searchParams.set(k, v);
                         });
                         link.href = url.toString();
-                    } catch (e) {
-                        console.log("Error processing link:", link.href);
                     }
-                });
-            }
-        })();
-    </script>
-</body>
+                } catch (e) {
+                    // 个别链接报错不影响全局
+                }
+            });
+        }
+
+        // 1. 立即执行
+        enforceTracking();
+        // 2. 页面完全加载后再执行一次
+        window.addEventListener('load', enforceTracking);
+        // 3. 每隔 1 秒强制检查一次（防止弹窗等动态元素漏掉），执行 5 次后停止
+        let count = 0;
+        let timer = setInterval(() => {
+            enforceTracking();
+            count++;
+            if (count > 5) clearInterval(timer);
+        }, 1000);
+    })();
+</script>
 
 </body>
 </html>
