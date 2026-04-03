@@ -538,49 +538,45 @@
 
 <p style="margin-top: 20px;">© 2026 All Rights Reserved</p>
 
-</footer>
-</div> <script type="text/javascript">
-    (function() {
-        // 1. 获取当前页面地址栏的全部参数
-        const params = new URLSearchParams(window.location.search);
-        
-        // 2. 如果地址栏有参数，则执行追加逻辑
-        if (params.toString()) {
-            // 3. 找到页面中所有 class 包含 'cta-link' 的元素（包括按钮和文字链接）
-            document.querySelectorAll('.cta-link').forEach(link => {
-                try {
-                    let url = new URL(link.href);
-                    // 4. 将地址栏的每一个参数都塞进跳转链接里
-                    params.forEach((v, k) => {
-                        url.searchParams.set(k, v);
-                    });
-                    // 5. 更新按钮的真实跳转地址
-                    link.href = url.toString();
-                } catch (e) {
-                    console.log("Error processing link:", link.href);
-                }
-            });
-        }
-    })();
-</script>
 <div id="sticky-footer-cta" class="sticky-footer">
-    <div class="footer-content">
-        <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="sticky-btn">
-            Get 70% Discount
-        </a>
-        <div>
-            <script>
-// 这段就是 JS 代码，不需要编辑器，直接贴在 HTML 里
-window.addEventListener("scroll", function() {
-    var footer = document.getElementById('sticky-footer-cta');
-    // 为了让你现在能看到效果，我们设为：只要滚动超过 100 像素就出来
-    if (window.pageYOffset > 100) {
-        footer.classList.add('show');
-    } else {
-        footer.classList.remove('show');
-    }
-});
-</script>
+        <div class="footer-content">
+            <a href="https://www.gadgetsecom.com/25LZL4D/9ZQ18QT/?uid=6932" class="cta-link sticky-btn">
+                Get 70% Discount
+            </a>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            var footer = document.getElementById('sticky-footer-cta');
+            if (window.pageYOffset > 100) {
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            if (params.toString()) {
+                // 它会扫描页面上所有带 cta-link 的链接并追加参数
+                document.querySelectorAll('.cta-link').forEach(link => {
+                    try {
+                        let url = new URL(link.href);
+                        params.forEach((v, k) => {
+                            url.searchParams.set(k, v);
+                        });
+                        link.href = url.toString();
+                    } catch (e) {
+                        console.log("Error processing link:", link.href);
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
 
 </body>
 </html>
